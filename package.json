@@ -1,0 +1,19 @@
+{
+  "name": "shaping-up-with-angular-js",
+  "version": "0.0.1",
+  "description": "CodeSchool.com: Shaping up with Angular.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickoram/shaping-up-with-angular-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.9",
+    "bootstrap": "^3.3.6"
+  }
+}
