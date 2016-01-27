@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!-- directive creates angular application by running store module when document loads -->
+<html ng-app="store">
+  <head>
+    <link rel="stylesheet" type="test/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+
+    <!-- by including module, treats html inside 'ng-app' as part of app -->
+    <!-- this means we start writing expressions -->
+    <script type="text/javascript" src="app.js"></script>
+
+    <p>{{"hello" + "you"}}</p>
+  </body>
+</html>
