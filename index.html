@@ -9,7 +9,9 @@
   <body ng-controller="StoreController as store">
       <ul class="list-group">
           <li class="list-group-item" ng-repeat="product in store.products">
-              <h3>{{product.name}}<em class="pull-right">${{product.price}}</em></h3>
+              <h3>{{product.name}}
+                  <em class="pull-right">{{product.price | currency}}</em>
+              </h3>
               <p>{{product.description}}</p>
               <button ng-show="product.canPurchase">Add to Cart</button>
           </li>

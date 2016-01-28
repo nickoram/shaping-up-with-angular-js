@@ -4,7 +4,7 @@
   var gems = [
       {
           name: 'Dodecahedron',
-          price: 2.99,
+          price: 2,
           description: 'Mea sale noluisse ex, aeque theophrastus in qui.',
           canPurchase: false,
           soldOut: true
