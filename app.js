@@ -36,6 +36,13 @@
               'images/hexagem-1.png',
               'images/hexagem-2.png',
               'images/hexagem-3.png'
+          ],
+          reviews: [
+              {
+                  stars: 5,
+                  body: "This gem rocks!",
+                  author: "hschrader@nm.dea.gov"
+              }
           ]
       },
       {
