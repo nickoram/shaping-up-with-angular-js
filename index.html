@@ -36,6 +36,7 @@
                           <a href ng-click="panel.selectTab(3)">Reviews</a>
                       </li>
                   </ul>
+
                   <div class="panel" ng-show="panel.isSelected(1)">
                       <h4>Description</h4>
                       <blockquote>{{product.description}}</blockquote>
@@ -47,30 +48,32 @@
                   <div class="panel" ng-show="panel.isSelected(3)">
                       <h4>Reviews</h4>
 
+                      <!-- Product review list -->
                       <blockquote ng-repeat="review in product.reviews">
                           <b>Stars: {{review.stars}}</b>
                           {{review.body}}
                           <cite class="clearfix">-{{review.author}}</cite>
                       </blockquote>
 
-                      <form name="reviewForm">
+                      <!-- Product review form -->
+                      <form name="reviewForm" ng-controller="ReviewController as reviewCtrl">
                           <!-- preview -->
                           <blockquote>
-                              <b>Stars: {{review.stars}}</b>
-                              {{review.body}}
-                              <cite class="clearfix">-{{review.author}}</cite>
+                              <b>Stars: {{reviewCtrl.review.stars}}</b>
+                              {{reviewCtrl.review.body}}
+                              <cite class="clearfix">-{{reviewCtrl.review.author}}</cite>
                           </blockquote>
 
-                          <!-- review form -->
+                          <!-- form inputs -->
                           <h4>Submit a Review</h4>
                           <fieldset class="form-group">
-                              <select ng-model="review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars"></select>
+                              <select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars"></select>
                           </fieldset>
                           <fieldset class="form-group">
-                              <textarea ng-model="review.body" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
+                              <textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
                           </fieldset>
                           <fieldset class="form-group">
-                              <input ng-model="review.author" class="form-control" placeholder="hschrader@nm.dea.gov" type="email" title="Email" />
+                              <input ng-model="reviewCtrl.review.author" class="form-control" placeholder="hschrader@nm.dea.gov" type="email" title="Email" />
                           </fieldset>
                           <fieldset class="form-group">
                               <input class="btn btn-primary pull-right" type="submit" value="Submit Review" />

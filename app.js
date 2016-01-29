@@ -25,6 +25,10 @@
       };
   });
 
+  app.controller('ReviewController', function() {
+     this.review = {}; 
+  });
+
   var gems = [
       {
           name: 'Dodecahedron',
