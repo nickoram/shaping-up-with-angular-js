@@ -7,6 +7,11 @@
   </head>
 
   <body ng-controller="StoreController as store">
+      <header>
+          <h1 class="text-center">Bub's Angular Store</h1>
+          <h2 class="text-center">- best shop to gem hop -</h2>
+      </header>
+
       <div class="list-group">
           <div class="list-group-item" ng-repeat="product in store.products | orderBy:'-price'">
               <h3>{{product.name}}
