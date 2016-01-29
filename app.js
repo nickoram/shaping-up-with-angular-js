@@ -25,10 +25,9 @@
           canPurchase: false,
           soldOut: true,
           images: [
-              {
-                  full: 'images/hexagem-full.png',
-                  thumb: 'images/hexagem-thumb.png'
-              }
+              'images/hexagem-1.png',
+              'images/hexagem-2.png',
+              'images/hexagem-3.png'
           ]
       },
       {
@@ -38,10 +37,9 @@
           canPurchase: true,
           soldOut: false,
           images: [
-              {
-                  full: 'images/octogem-full.png',
-                  thumb: 'images/octogem-thumb.png'
-              }
+              'images/octogem-1.png',
+              'images/octogem-2.png',
+              'images/octogem-3.png'
           ]
       }
   ];
