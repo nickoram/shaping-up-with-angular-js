@@ -29,6 +29,7 @@
      this.review = {};
 
      this.addReview = function(product) {
+         this.review.createdOn = Date.now();
          product.reviews.push(this.review);
          this.review = {};  // clears front-end 2-way data binding
      };
@@ -50,7 +51,8 @@
               {
                   stars: 5,
                   body: "This gem rocks!",
-                  author: "hschrader@nm.dea.gov"
+                  author: "hschrader@nm.dea.gov",
+                  createdOn: 1397490980837
               }
           ]
       },
