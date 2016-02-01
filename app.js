@@ -26,7 +26,12 @@
   });
 
   app.controller('ReviewController', function() {
-     this.review = {}; 
+     this.review = {};
+
+     this.addReview = function(product) {
+         product.reviews.push(this.review);
+         this.review = {};  // clears front-end 2-way data binding
+     };
   });
 
   var gems = [
@@ -59,7 +64,8 @@
               'images/octogem-1.png',
               'images/octogem-2.png',
               'images/octogem-3.png'
-          ]
+          ],
+          reviews: []
       }
   ];
 

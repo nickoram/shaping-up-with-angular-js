@@ -56,7 +56,8 @@
                       </blockquote>
 
                       <!-- Product review form -->
-                      <form name="reviewForm" ng-controller="ReviewController as reviewCtrl">
+                      <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+                                              ng-submit="reviewCtrl.addReview(product)">
                           <!-- preview -->
                           <blockquote>
                               <b>Stars: {{reviewCtrl.review.stars}}</b>
