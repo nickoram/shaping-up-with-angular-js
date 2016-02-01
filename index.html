@@ -36,16 +36,16 @@
                       </li>
                   </ul>
 
-                  <div class="panel" ng-show="panel.isSelected(1)">
+                  <div ng-show="panel.isSelected(1)">
                       <h4>Description</h4>
                       <blockquote>{{product.description}}</blockquote>
                   </div>
-                  <div class="panel" ng-show="panel.isSelected(2)">
+                  <div ng-show="panel.isSelected(2)">
                       <h4>Specifications</h4>
                       <blockquote>None Yet</blockquote>
                   </div>
 
-                  <product-reviews class="panel" ng-show="panel.isSelected(3)"></product-review>
+                  <product-reviews ng-show="panel.isSelected(3)"></product-review>
               </section>
           </div>
       </div>
