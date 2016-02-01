@@ -42,6 +42,13 @@
       };
   });
 
+  app.directive('productReviews', function() {
+      return {
+          restrict: 'E',
+          templateUrl: 'product-reviews.html'
+      };
+  });
+
   var gems = [
       {
           name: 'Dodecahedron',
