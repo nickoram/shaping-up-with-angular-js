@@ -35,6 +35,13 @@
      };
   });
 
+  app.directive('productTitle', function() {
+      return {
+          restrict: 'E', // type of directive, 'Element' in this case
+          templateUrl: 'product-title.html' // hypen translate to camel in JS
+      };
+  });
+
   var gems = [
       {
           name: 'Dodecahedron',
