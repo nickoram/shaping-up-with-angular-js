@@ -20,16 +20,6 @@
      };
   });
 
-  app.controller('ReviewController', function() {
-     this.review = {};
-
-     this.addReview = function(product) {
-         this.review.createdOn = Date.now();
-         product.reviews.push(this.review);
-         this.review = {};  // clears front-end 2-way data binding
-     };
-  });
-
   app.directive('productTitle', function() {
       return {
           restrict: 'E', // type of directive, 'Element' in this case
@@ -40,7 +30,17 @@
   app.directive('productReviews', function() {
       return {
           restrict: 'E',
-          templateUrl: 'product-reviews.html'
+          templateUrl: 'product-reviews.html',
+          controller: function() {
+              this.review = {};
+
+              this.addReview = function(product) {
+                  this.review.createdOn = Date.now();
+                  product.reviews.push(this.review);
+                  this.review = {};  // clears front-end 2-way data binding
+              };
+          },
+          controllerAs: 'reviewCtrl'
       };
   });
 
