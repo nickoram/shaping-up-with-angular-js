@@ -1,0 +1,19 @@
+<section>
+    <ul class="nav nav-pills">
+        <li ng-class="{ active: tabs.isSelected(1) }">
+            <a href ng-click="tabs.selectTab(1)">Description</a>
+        </li>
+        <li ng-class="{ active: tabs.isSelected(2) }">
+            <a href ng-click="tabs.selectTab(2)">Specifications</a>
+        </li>
+        <li ng-class="{ active: tabs.isSelected(3) }">
+            <a href ng-click="tabs.selectTab(3)">Reviews</a>
+        </li>
+    </ul>
+
+    <product-description ng-show="tabs.isSelected(1)"></product-description>
+
+    <product-specs ng-show="tabs.isSelected(2)"></product-specs>
+
+    <product-reviews ng-show="tabs.isSelected(3)"></product-review>
+</section>

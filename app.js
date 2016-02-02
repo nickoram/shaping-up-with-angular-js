@@ -5,18 +5,6 @@
       this.products = gems;
   });
 
-  app.controller('TabController', function() {
-      this.tab = 1;
-
-      this.selectTab = function(setTab) {
-          this.tab = setTab;
-      };
-
-      this.isSelected = function(checkTab) {
-          return this.tab === checkTab;
-      };
-  });
-
   app.controller('GalleryController', function() {
       this.current = 0;
 
@@ -61,6 +49,25 @@
           restrict: 'E',
           templateUrl: 'product-specs.html'
       }
+  });
+
+  app.directive('productTabs', function() {
+      return {
+          restrict: 'E',
+          templateUrl: 'product-tabs.html',
+          controller: function() {
+              this.tab = 1;
+
+              this.selectTab = function(setTab) {
+                  this.tab = setTab;
+              };
+
+              this.isSelected = function(checkTab) {
+                  return this.tab === checkTab;
+              };
+          },
+          controllerAs: 'tabs'
+      };
   });
 
   var gems = [
