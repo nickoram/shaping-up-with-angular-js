@@ -5,7 +5,7 @@
       this.products = gems;
   });
 
-  app.controller('PanelController', function() {
+  app.controller('TabController', function() {
       this.tab = 1;
 
       this.selectTab = function(setTab) {
